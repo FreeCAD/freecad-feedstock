@@ -79,6 +79,7 @@ requirements:
         - coin3d
         - pivy
         - {{ pin_compatible('smesh', max_pin='x.x.x') }}
+        - fmt
         - freetype
         - numpy
         - six
