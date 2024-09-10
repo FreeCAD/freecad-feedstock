@@ -1,9 +1,9 @@
 c_stdlib:
 - sysroot
 c_stdlib_version:
-- '2.12'
+- '2.17'
 cdt_name:
-- cos6
+- cos7
 channel_sources:
 - freecad/label/dev,conda-forge,defaults
 channel_targets:
@@ -11,7 +11,7 @@ channel_targets:
 cxx_compiler:
 - gxx
 cxx_compiler_version:
-- '12'
+- '13'
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 freetype:
@@ -25,8 +25,6 @@ occt:
 pcl:
 - 1.14.0
 pin_run_as_build:
-  occt:
-    max_pin: x.x
   python:
     min_pin: x.x
     max_pin: x.x
