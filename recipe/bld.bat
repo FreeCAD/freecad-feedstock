@@ -58,6 +58,5 @@ if errorlevel 1 exit 1
 ninja install
 if errorlevel 1 exit 1
 
-rmdir /s /q "%LIBRARY_PREFIX%\doc"
 ren %LIBRARY_PREFIX%\bin\FreeCAD.exe freecad.exe
 ren %LIBRARY_PREFIX%\bin\FreeCADCmd.exe freecadcmd.exe

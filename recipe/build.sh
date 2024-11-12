@@ -70,6 +70,5 @@ cmake -G "Ninja" \
       ..
 
 ninja install
-rm -r ${PREFIX}/share/doc/FreeCAD     # smaller size of package!
 mv ${PREFIX}/bin/FreeCAD ${PREFIX}/bin/freecad
 mv ${PREFIX}/bin/FreeCADCmd ${PREFIX}/bin/freecadcmd
