@@ -1,5 +1,5 @@
 {% set name = "freecad" %}
-{% set version = "1.0rc4" %}
+{% set version = "1.0.0" %}
 {% set build_number = 0 %}
 {% set build_number = build_number + 500 %}  # [FEATURE_DEBUG]
 
@@ -8,9 +8,9 @@ package:
     version: {{ version }}
 
 source:
-    url: https://github.com/FreeCAD/FreeCAD-Bundle/releases/download/1.0rc4/freecad_source.tar.gz
+    url: https://github.com/FreeCAD/FreeCAD-Bundle/releases/download/1.0.0/freecad_source.tar.gz
     fn: freecad_source_{{ build_number }}.tar.gz
-    # sha256:
+    sha256: b5af251615eeab3905b2aa5fbd432cf90c57b86f9ba2a50ca23c9cc1703f81d9
     patches:
         - patches/osx_arm64_cross_compiling.patch    # [build_platform != target_platform and osx]
 

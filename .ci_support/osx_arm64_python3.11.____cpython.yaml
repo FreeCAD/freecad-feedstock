@@ -7,9 +7,9 @@ c_stdlib:
 c_stdlib_version:
 - '11.0'
 channel_sources:
-- freecad/label/dev,conda-forge
+- freecad,conda-forge
 channel_targets:
-- freecad dev
+- freecad main
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
