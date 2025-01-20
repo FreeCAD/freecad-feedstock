@@ -33,7 +33,7 @@ if [[ ${HOST} =~ .*darwin.* ]]; then
   hdiutil attach -readonly /tmp/3dFW.dmg
   sudo installer -package /Volumes/3Dconnexion\ Software/Install\ 3Dconnexion\ software.pkg -target /
   diskutil eject /Volumes/3Dconnexion\ Software
-  CMAKE_PLATFORM_FLAGS+=(-DFREECAD_USE_3DCONNEXION:BOOL=ON)
+  CMAKE_PLATFORM_FLAGS+=(-DFREECAD_3DCONNEXION_SUPPORT:STRING=Both)
   CMAKE_PLATFORM_FLAGS+=(-D3DCONNEXIONCLIENT_FRAMEWORK:FILEPATH="/Library/Frameworks/3DconnexionClient.framework")
 
   CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
