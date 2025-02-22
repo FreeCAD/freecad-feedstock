@@ -16,7 +16,7 @@ source:
 
 build:
     number: {{ build_number }}
-    skip: true  # [py != 311]
+    skip: true
 
 requirements:
     build:
@@ -43,7 +43,7 @@ requirements:
     host:
         - libboost-devel
         - python
-        - qt-main
+        - qt6-main
         - occt
         - xerces-c
         - zlib
@@ -51,7 +51,7 @@ requirements:
         - eigen
         - pybind11
         - coin3d
-        - pyside2
+        - pyside6
         - smesh
         - doxygen  # [build_platform == target_platform]
         - hdf5
@@ -63,9 +63,9 @@ requirements:
         - matplotlib-base
         - yaml-cpp
         - pivy
-        - noqt6
+        - noqt5
     run:
-        - pyside2
+        - pyside6
         - vtk
         - {{ pin_compatible('occt', max_pin='x.x.x') }}
         - xerces-c
