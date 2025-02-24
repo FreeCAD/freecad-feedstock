@@ -66,6 +66,7 @@ cmake -G "Ninja" \
       -D FREECAD_USE_PCH:BOOL=OFF \
       -D INSTALL_TO_SITEPACKAGES:BOOL=ON \
       -D ENABLE_DEVELOPER_TESTS:BOOL="${DEV_TESTS}" \
+      -D FREECAD_QT_VERSION=6 \
       ${CMAKE_PLATFORM_FLAGS[@]} \
       ..
 
