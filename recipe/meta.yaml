@@ -13,8 +13,6 @@ source:
     # sha256:
     patches:
         - patches/osx_arm64_cross_compiling.patch    # [build_platform != target_platform and osx]
-        - patches/0001-Revert-Mesh-Remove-explicit-C-17-requirement.patch
-        - patches/0001-Revert-CMake-Update-compiler-and-standard-mins.patch
 
 build:
     number: {{ build_number }}
