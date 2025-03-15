@@ -5,7 +5,7 @@ channel_sources:
 channel_targets:
 - freecad dev
 cxx_compiler:
-- vs2022
+- vs2019
 freetype:
 - '2'
 hdf5:
@@ -15,19 +15,19 @@ libboost_devel:
 occt:
 - 7.8.1
 pcl:
-- 1.15.0
+- 1.14.1
 pin_run_as_build:
   python:
     min_pin: x.x
     max_pin: x.x
 python:
 - 3.11.* *_cpython
-qt6_main:
-- '6.8'
+qt_main:
+- '5.15'
 target_platform:
 - win-64
 vtk:
-- 9.3.1
+- 9.3.0
 xerces_c:
 - '3.2'
 zlib:

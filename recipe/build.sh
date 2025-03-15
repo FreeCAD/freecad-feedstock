@@ -46,7 +46,6 @@ cmake -G "Ninja" \
       -D CMAKE_LIBRARY_PATH:FILEPATH="$PREFIX/lib" \
       -D CMAKE_INSTALL_LIBDIR:FILEPATH="$PREFIX/lib" \
       -D CMAKE_INCLUDE_PATH:FILEPATH="$PREFIX/include" \
-      -D FREECAD_QT_VERSION = 6 \
       -D FREECAD_USE_OCC_VARIANT="Official Version" \
       -D OCC_INCLUDE_DIR:FILEPATH="$PREFIX/include" \
       -D USE_BOOST_PYTHON:BOOL=OFF \

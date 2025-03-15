@@ -13,10 +13,12 @@ source:
     # sha256:
     patches:
         - patches/osx_arm64_cross_compiling.patch    # [build_platform != target_platform and osx]
+        - patches/0001-Revert-Mesh-Remove-explicit-C-17-requirement.patch
+        - patches/0001-Revert-CMake-Update-compiler-and-standard-mins.patch
 
 build:
     number: {{ build_number }}
-    skip: true  # [py != 312]
+    skip: true  # [py != 311]
 
 requirements:
     build:
@@ -43,7 +45,7 @@ requirements:
     host:
         - libboost-devel
         - python
-        - qt6-main
+        - qt-main
         - occt
         - xerces-c
         - zlib
@@ -51,7 +53,7 @@ requirements:
         - eigen
         - pybind11
         - coin3d
-        - pyside6
+        - pyside2
         - smesh
         - doxygen  # [build_platform == target_platform]
         - hdf5
@@ -63,9 +65,9 @@ requirements:
         - matplotlib-base
         - yaml-cpp
         - pivy
-        - noqt5
+        - noqt6
     run:
-        - pyside6
+        - pyside2
         - vtk
         - {{ pin_compatible('occt', max_pin='x.x.x') }}
         - xerces-c
