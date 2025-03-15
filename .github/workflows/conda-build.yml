@@ -29,7 +29,7 @@ jobs:
           - CONFIG: linux_aarch64_python3.11.____cpython
             UPLOAD_PACKAGES: True
             os: ubuntu
-            runs_on: ['ubuntu-22.04-arm']
+            runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma9
           - CONFIG: osx_64_python3.11.____cpython
             UPLOAD_PACKAGES: True
@@ -60,6 +60,7 @@ jobs:
       shell: bash
       run: |
         echo "::group::Configure binfmt_misc"
+        docker run --rm --privileged multiarch/qemu-user-static:register --reset --credential yes
         export flow_run_id="github_$GITHUB_RUN_ID"
         export remote_url="https://github.com/$GITHUB_REPOSITORY"
         export sha="$GITHUB_SHA"
