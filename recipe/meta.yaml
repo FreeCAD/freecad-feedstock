@@ -18,7 +18,13 @@ source:
 
 build:
     number: {{ build_number }}
+<<<<<<< HEAD
     skip: true  # [py != 311]
+||||||| parent of 458363e (Unpin Python.)
+    skip: true  # [py != 312]
+=======
+    skip: true
+>>>>>>> 458363e (Unpin Python.)
 
 requirements:
     build:
