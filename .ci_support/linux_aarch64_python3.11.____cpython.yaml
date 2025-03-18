@@ -19,9 +19,9 @@ freetype:
 hdf5:
 - 1.14.3
 libboost_devel:
-- '1.82'
+- '1.84'
 occt:
-- 7.7.2
+- 7.8.1
 pcl:
 - 1.14.0
 pin_run_as_build:
@@ -30,8 +30,8 @@ pin_run_as_build:
     max_pin: x.x
 python:
 - 3.11.* *_cpython
-qt_main:
-- 5.15.13
+qt6_main:
+- '6.8'
 target_platform:
 - linux-aarch64
 vtk:
