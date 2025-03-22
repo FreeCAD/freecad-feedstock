@@ -1,4 +1,7 @@
-rm -rf C:/hostedtoolcache/windows/Python
+@echo on
+if defined GITHUB_ACTIONS (
+    rmdir /s /q "C:\hostedtoolcache\windows\Python"
+)
 
 mkdir build
 cd build
