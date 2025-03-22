@@ -13,8 +13,6 @@ source:
     # sha256:
     patches:
         - patches/osx_arm64_cross_compiling.patch    # [build_platform != target_platform and osx]
-        - patches/0001-Revert-Mesh-Remove-explicit-C-17-requirement.patch
-        - patches/0001-Revert-CMake-Update-compiler-and-standard-mins.patch
 
 build:
     number: {{ build_number }}
@@ -22,6 +20,11 @@ build:
 
 requirements:
     build:
+        - python                                 # [build_platform != target_platform]
+        - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+        - pybind11                               # [build_platform != target_platform]
+        - qt6-main                               # [build_platform != target_platform]
+        - noqt5                                  # [build_platform != target_platform]
         - {{ compiler("cxx") }}
         - {{ stdlib("c") }}
         - {{ cdt('mesa-libgl-devel') }}      # [linux]
@@ -39,53 +42,41 @@ requirements:
         - cmake
         - swig
         - ninja
-        - sed                                    # [unix]
-        - python                                 # [build_platform != target_platform]
-        - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+        - sed                                # [unix]
     host:
-        - libboost-devel
-        - python
-        - qt-main
-        - occt
-        - xerces-c
-        - zlib
-        - vtk
+        - coin3d
         - eigen
-        - pybind11
-        - coin3d
-        - pyside2
-        - smesh
-        - doxygen  # [build_platform == target_platform]
-        - hdf5
         - freetype
-        - libspnav # [linux]
-        - pcl
-        - six
-        - ply
+        - hdf5
+        - libboost-devel
+        - libspnav          # [linux]
         - matplotlib-base
-        - yaml-cpp
-        - pivy
-        - noqt6
-    run:
-        - pyside2
-        - vtk
-        - {{ pin_compatible('occt', max_pin='x.x.x') }}
-        - xerces-c
-        - zlib
-        - hdf5
-        - python
-        - coin3d
-        - pivy
-        - {{ pin_compatible('smesh', max_pin='x.x.x') }}
-        - freetype
-        - numpy
-        - six
-        - pyyaml
-        - libspnav  # [linux]
+        - noqt5
+        - occt
         - pcl
+        - pivy
         - ply
-        - gmsh
+        - pybind11
+        - pyside6
+        - python
+        - qt6-main
+        - smesh
+        - tbb-devel         # [win]
+        - vtk
+        - xerces-c
+        - xorg-xproto   # [linux]
+        - yaml-cpp
+        - zlib
+    run:
         - graphviz
+        - gmsh
+        - libspnav  # [linux]
+        - numpy
+        - python
+        - pyside6
+        - pivy
+        - pyyaml
+        - ply
         - requests
 
 about:
