@@ -1,4 +1,7 @@
-rm -rf C:/hostedtoolcache/windows/Python
+@echo on
+if defined GITHUB_ACTIONS (
+    rmdir /s /q "C:\hostedtoolcache\windows\Python"
+)
 
 mkdir build
 cd build
@@ -33,14 +36,11 @@ cmake -G "Ninja" ^
       -D FREECAD_USE_OCC_VARIANT="Official Version" ^
       -D OCC_OCAF_LIBRARIES:FILEPATH="%LIBRARY_PREFIX%/lib" ^
       -D BUILD_REVERSEENGINEERING:BOOL=ON ^
-      -D USE_BOOST_PYTHON:BOOL=OFF ^
-      -D FREECAD_USE_PYBIND11:BOOL=ON ^
       -D SMESH_INCLUDE_DIR:FILEPATH="%LIBRARY_PREFIX%/include/smesh" ^
       -D SMESH_LIBRARY:FILEPATH="%LIBRARY_PREFIX%/lib/SMESH.lib" ^
       -D FREECAD_USE_EXTERNAL_SMESH:BOOL=ON ^
       -D FREECAD_USE_EXTERNAL_FMT:BOOL=OFF ^
       -D BUILD_FLAT_MESH:BOOL=ON ^
-      -D BUILD_SHIP:BOOL=OFF ^
       -D OCCT_CMAKE_FALLBACK:BOOL=ON ^
       -D PYTHON_EXECUTABLE:FILEPATH="%PREFIX%/python" ^
       -D Python3_EXECUTABLE:FILEPATH="%PREFIX%/python" ^
