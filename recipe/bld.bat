@@ -1,8 +1,4 @@
 @echo on
-if defined GITHUB_ACTIONS (
-    rmdir /s /q "C:\hostedtoolcache\windows\Python"
-)
-
 mkdir build
 cd build
 
@@ -43,6 +39,7 @@ cmake -G "Ninja" ^
       -D BUILD_FLAT_MESH:BOOL=ON ^
       -D OCCT_CMAKE_FALLBACK:BOOL=ON ^
       -D PYTHON_EXECUTABLE:FILEPATH="%PREFIX%/python" ^
+      -D Python_EXECUTABLE:FILEPATH="%PREFIX%/python" ^
       -D Python3_EXECUTABLE:FILEPATH="%PREFIX%/python" ^
       -D BUILD_DYNAMIC_LINK_PYTHON:BOOL=ON ^
       -D FREECAD_USE_PCH:BOOL=OFF ^
