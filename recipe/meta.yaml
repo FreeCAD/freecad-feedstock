@@ -60,6 +60,7 @@ requirements:
         - xorg-libxdamage   # [linux]
         - xorg-libxxf86vm   # [linux]
         - xorg-xproto       # [linux]
+        - winpthreads-devel  # [win]
         - yaml-cpp
         - zlib
     run:
