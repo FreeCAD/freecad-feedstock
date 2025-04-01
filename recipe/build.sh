@@ -59,6 +59,7 @@ cmake -G "Ninja" \
       -D INSTALL_TO_SITEPACKAGES:BOOL=ON \
       -D ENABLE_DEVELOPER_TESTS:BOOL="${DEV_TESTS}" \
       -D QT_HOST_PATH="${PREFIX}" \
+      -D CMAKE_POLICY_VERSION_MINIMUM=3.5 \
       ${CMAKE_PLATFORM_FLAGS[@]} \
       ..
 
