@@ -103,6 +103,7 @@ jobs:
         call ".scripts\run_win_build.bat"
       env:
         MINIFORGE_HOME: D:\Miniforge
+        CONDA_BLD_PATH: D:\bld
         PYTHONUNBUFFERED: 1
         CONFIG: ${{ matrix.CONFIG }}
         CI: github_actions
