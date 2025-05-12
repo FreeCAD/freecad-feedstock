@@ -10,8 +10,4 @@ c_compiler:           # [win]
 cxx_compiler:         # [win]
   - vs2022            # [win]
 qt6_main:
-  - '6.7'
-pcl:
-  - 1.14.1
-libboost_devel:
-- '1.86'
+  - '6.8'
