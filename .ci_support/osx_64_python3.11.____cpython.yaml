@@ -25,7 +25,7 @@ macos_machine:
 occt:
 - 7.8.1
 pcl:
-- 1.14.1
+- 1.15.0
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -33,7 +33,7 @@ pin_run_as_build:
 python:
 - 3.11.* *_cpython
 qt6_main:
-- '6.7'
+- '6.8'
 target_platform:
 - osx-64
 vtk:
