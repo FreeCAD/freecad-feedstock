@@ -3,6 +3,8 @@ rm -rf C:/hostedtoolcache/windows/Python
 mkdir build
 cd build
 
+rem C:/Program Files/LLVM/bin/clang.exe
+
 if "%FEATURE_DEBUG%"=="1" (
       set BUILD_TYPE="Debug"
       set DEV_TESTS="ON"
