@@ -51,7 +51,7 @@ requirements:
         - zlib
         - vtk
         - eigen
-        - pybind11
+        - pybind11 <3.0
         - coin3d
         - pyside2
         - smesh
