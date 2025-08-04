@@ -5,7 +5,7 @@ channel_sources:
 channel_targets:
 - freecad main
 cxx_compiler:
-- vs2019
+- vs2022
 freetype:
 - '2'
 hdf5:
