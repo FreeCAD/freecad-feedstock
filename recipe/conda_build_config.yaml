@@ -5,6 +5,10 @@ channel_targets:
 c_stdlib_version:     # [osx]
   - '11.0'            # [osx and arm64]
   - '10.13'           # [osx and x86_64]
+cxx_compiler_version: # [osx]
+  - 18                # [osx]
+cxx_compiler_version: # [linux]
+  - 13                # [linux]
 occt:
   - 7.8.1
 vtk:
