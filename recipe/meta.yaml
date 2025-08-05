@@ -10,7 +10,7 @@ package:
 source:
     url: https://github.com/FreeCAD/FreeCAD-Bundle/releases/download/{{ version }}/freecad_source.tar.gz
     fn: freecad_source_{{ build_number }}.tar.gz
-    sha256: 5816051b4c56466571e80b0760a8ff4e84afce2f20d59c8b40afba9db0a5dfa5
+    sha256: c9b8e19dbf20cea387c432890ea059059ff6b57ec4cd77820cd1202d1247bbde
     patches:
         - patches/osx_arm64_cross_compiling.patch    # [build_platform != target_platform and osx]
 
